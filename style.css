@@ -77,6 +77,11 @@ display: flex;
   font-size: 25px;
   width: 222px;
     border-radius: 30px;
+    transition: all ease 0.5s;
+}
+.tab:hover{
+  background-color: white;
+  color: black;
 }
 
 .bar{
@@ -87,6 +92,9 @@ display: flex;
   border-bottom: 0px;
   border-top: 0px;
   padding: 2px;
+}
+.value-active{
+  color: #757171 !important;
 }
 
 .tab.active {
