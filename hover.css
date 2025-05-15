@@ -3,8 +3,11 @@
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 20px;
   justify-content: center;
-  max-width: 800px;
-  margin: auto;
+  max-width: 753px;
+      margin-top: 7rem;
+    margin-bottom: 7rem;
+    margin-left: 19rem;
+    margin-right: 7rem
 }
 
 .team-member {
