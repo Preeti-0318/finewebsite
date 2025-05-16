@@ -269,3 +269,28 @@ width: 65%;
   flex-direction: column;
   /* padding-left: 11rem; */
 }
+@media (max-width: 600px) {
+  .tab {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .subnav a {
+    font-size: 18px;
+  }
+
+  .value-item .value-heading,
+  .value-item-right .value-heading {
+    font-size: 22px;
+  }
+
+  .value-item .value-para,
+  .value-item-right .value-para {
+    font-size: 13px;
+  }
+}

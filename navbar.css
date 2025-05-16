@@ -1,43 +1,32 @@
 body {
-  padding-top: 66px; /* Avoids content going under the fixed navbar */
+  padding-top: 100px;
   margin: 0;
-  background-color: #efeaea; /* Optional: set your background */
+  background-color: #efeaea;
+  font-family: Arial, sans-serif;
 }
 
 .navbar {
   position: fixed;
-  top: 20px;               
-  left: 50px;     
-  transform: translateX(10%);         
-  width: 1146px;           
-  height: 85px;           
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1146px;
+  height: auto;
   background-color: #0a0a0a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   z-index: 999;
-  border-radius: 20px;     /* Approximated corner radius */
-}
-
-/* Logo section */
-.logo {
-  display: flex;
-  align-items: center;
+  border-radius: 20px;
+  flex-wrap: wrap;
 }
 
 .logo img {
   height: 32px;
-  margin-right: 0.5rem;
 }
 
-.logo span {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-/* Menu links */
 .menu {
   display: flex;
   gap: 2rem;
@@ -48,14 +37,12 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
 }
 
 .menu a:hover {
-  color: #333333;
+  color: #333;
 }
 
-/* Sign-in button */
 .sign-in-btn {
   background-color: #2a2a2a;
   border: none;
@@ -64,9 +51,47 @@ body {
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .sign-in-btn:hover {
   background-color: #3a3a3a;
+}
+
+/* Hide checkbox and hamburger on large screens */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #0a0a0a;
+    padding: 1rem;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .menu a,
+  .sign-in-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
 }
